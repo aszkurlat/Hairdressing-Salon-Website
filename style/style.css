@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=latin-ext");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Oswald", sans-serif;
+}
+/* ------------------------- MENU--------------------------- */
+
+nav {
+  background: #fff;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 2.5rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #555;
+  padding: 1vh;
+  margin: 0 1vh;
+  transition: 0.2s;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  border-bottom: 3px solid royalblue;
+  color: black;
+}
+
+.logo a {
+  font-family: "Pacifico";
+  color: royalblue;
+}
+
+.logo a:hover,
+.toggle a:hover {
+  border-bottom: none;
+}
+
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+
+.toggle a {
+  font-size: 20px;
+}
+
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3vw;
+}
+
+.toggle {
+  order: 1;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  order: 2;
+  display: none;
+}
+
+.item.active {
+  display: block;
+}
+
+/* Tablet menu */
+@media all and (min-width: 600px) {
+  .menu {
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .toggle {
+    flex: 1;
+    text-align: right;
+  }
+
+  .toggle {
+    order: 2;
+  }
+}
+
+/* Desktop menu */
+@media all and (min-width: 900px) {
+  .item {
+    display: block;
+    width: auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .item {
+    order: 1;
+  }
+
+  .menu li {
+    padding: 15px 10px;
+  }
+}
+
+/* ------------------------- HOME --------------------------- */
+
+.home {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 90vh;
+  background-image: url("../img/backgroung_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0 0 25% 3%;
+}
+
+.description {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  color: rgb(185, 185, 185);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: white;
+  text-transform: capitalize;
+  font-family: "oswald";
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.home h1 {
+  text-align: left;
+  font-size: 7.8vh;
+  color: rgb(167, 167, 167);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home h2 {
+  margin-left: 28%;
+  text-align: left;
+  font-size: 6vh;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(197, 70, 87);
+}
+
+/* ------------------------- SERVICES--------------------------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.services {
+  padding: 5vh 0;
+  background-color: rgb(58, 66, 90);
+}
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-content: space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.photos > div {
+  flex-basis: 80%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2vh;
+}
+
+div > h2.text {
+  font-family: "oswald", sans-serif;
+  color: rgb(182, 182, 182);
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 4px black;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2.7rem;
+  padding: 2vh 0;
+}
+
+.photos > div > img {
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .photos > div {
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .photos > div {
+    flex-basis: 30%;
+  }
+
+  div > h2.text {
+    font-size: 2rem;
+  }
+}
+
+/* ------------------------- TEAM--------------------------- */
+
+.team {
+  padding: 5vh 0;
+  background-image: url("../img/wall.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.team > h1 {
+  color: #fff;
+}
+
+.hairdressers {
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 30px 0;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.hairdressers > div > img {
+  width: 270px;
+  height: 270px;
+  border-radius: 1000px;
+  margin: 0.5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* ------------------------- CONTACT--------------------------- */
+
+.contact {
+  min-height: 70vh;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/contactLond.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.formArea {
+  display: flex;
+  flex-direction: column;
+  margin: 1% auto;
+  height: 10%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4rem;
+}
+
+.formArea input,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: rgb(170, 170, 170);
+  max-width: 100%;
+  background-color: transparent;
+  padding: 0.7em;
+  border-color: rgb(75, 75, 75);
+  margin-bottom: 1.4rem;
+  outline: none;
+}
+
+.formArea button {
+  background-color: tomato;
+  color: white;
+  font-size: 1.8rem;
+  padding: 1.3rem 0;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+.formArea textarea {
+  height: 15vh;
+}
+
+.contact > h1 {
+  color: rgb(75, 75, 75);
+}
+
+/* ------------------------- FOOTER--------------------------- */
+
+footer {
+  background-color: #000;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  padding: 2rem 0;
+}
